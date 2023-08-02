@@ -6,17 +6,30 @@ class CatalyticConverterDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cat. Converter Details',
+        title: Text(
+          'Cat. Converter Details',
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
             color: Colors.black,
           ),
         ),
+        flexibleSpace: Container(
+          // Add background image to AppBar
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/notification_header_image.jpg'),
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
       ),
       body: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
+          image: DecorationImage(
+            image: AssetImage('assets/images/car_rep2.jpg'), // Add background image to the Container
+            fit: BoxFit.cover,
+          ),
         ),
         child: ListView(
           padding: EdgeInsets.all(20),
@@ -26,9 +39,10 @@ class CatalyticConverterDetails extends StatelessWidget {
               child: Text(
                 'Packages',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 26,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.white.withOpacity(0.7),
                 ),
               ),
             ),
@@ -66,7 +80,7 @@ class PackageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.lightBlue,
+      color: Colors.black.withOpacity(0.5), // Set a transparent black color for the card background
       margin: EdgeInsets.symmetric(vertical: 10),
       child: ListTile(
         title: Text(
@@ -74,17 +88,24 @@ class PackageCard extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 18,
+            color: Colors.white, // Set the text color to white for better readability
           ),
         ),
         subtitle: Padding(
           padding: EdgeInsets.symmetric(vertical: 8),
-          child: Text(description),
+          child: Text(
+            description,
+            style: TextStyle(
+              color: Colors.white, // Set the text color to white for better readability
+            ),
+          ),
         ),
         trailing: Text(
           price,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 16,
+            color: Colors.white, // Set the text color to white for better readability
           ),
         ),
         onTap: () {
@@ -93,6 +114,7 @@ class PackageCard extends StatelessWidget {
       ),
     );
   }
+
   void _navigateToPackageDetails(BuildContext context, String title, String description, String price) {
     Navigator.push(
       context,

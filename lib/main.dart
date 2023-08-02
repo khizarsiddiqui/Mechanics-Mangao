@@ -2,11 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:mechanics_mangao/routes.dart';
 import 'package:mechanics_mangao/screens/splash/splash_screen.dart';
 import 'package:mechanics_mangao/theme.dart';
+import 'package:provider/provider.dart';
+import 'package:mechanics_mangao/providers/notification_provider.dart';
+import 'package:mechanics_mangao/providers/notification_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => NotificationProvider()),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
-
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
