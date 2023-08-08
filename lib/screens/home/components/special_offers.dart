@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../size_config.dart';
+import 'autoshow1details.dart';
+import 'autoshow2details.dart';
 import 'section_title.dart';
 import 'engine_service_details.dart';
 import 'engine_tuning_details.dart';
@@ -27,25 +29,25 @@ class SpecialOffers extends StatelessWidget {
           child: Row(
             children: [
               SpecialCard(
-                image: "assets/images/banner1.jpg",
-                category: "Engine Service",
+                image: "assets/images/pakwheels.jpg",
+                category: "Port Grand Autoshow 2k23",
                 press: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => EngineServiceDetails(), // Navigate to EngineServiceDetails screen
+                      builder: (context) => Autoshow1Details(),
                     ),
                   );
                 },
               ),
               SpecialCard(
-                image: "assets/images/banner2.jpg",
-                category: "Engine Tuning",
+                image: "assets/images/omni.jpg",
+                category: "Omni Cart Grand Festival 2k23",
                 press: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => EngineTuningDetails(), // Navigate to EngineTuningDetails screen
+                      builder: (context) => Autoshow2Details(),
                     ),
                   );
                 },
@@ -80,7 +82,7 @@ class SpecialCard extends StatelessWidget {
           width: getProportionateScreenWidth(335),
           height: getProportionateScreenWidth(138),
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(10),
             child: Stack(
               children: [
                 Image.asset(

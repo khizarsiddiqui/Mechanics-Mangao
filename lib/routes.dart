@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:mechanics_mangao/screens/home/components/package_details2.dart';
 import 'package:provider/provider.dart';
 import 'package:mechanics_mangao/screens/cart/cart_screen.dart';
 import 'package:mechanics_mangao/screens/complete_profile/complete_profile_screen.dart';
@@ -33,6 +34,14 @@ final Map<String, WidgetBuilder> routes = {
   PackageDetailsPage.routeName: (context) {
     final Map<String, dynamic> args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
     return PackageDetailsPage(
+      title: args['title'],
+      description: args['description'],
+      price: args['price'],
+    );
+  },
+  PackageDetails2Page.routeName: (context) {
+    final Map<String, dynamic> args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+    return PackageDetails2Page(
       title: args['title'],
       description: args['description'],
       price: args['price'],

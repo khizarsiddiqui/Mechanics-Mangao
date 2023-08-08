@@ -25,7 +25,7 @@ class DiscountBanner extends StatelessWidget {
         TextSpan(
           style: TextStyle(color: Colors.white),
           children: [
-            TextSpan(text: "Welcome!\n"),
+            TextSpan(text: "Welcome to\n"),
             TextSpan(
               text: "Mechanic Mangao",
               style: TextStyle(
