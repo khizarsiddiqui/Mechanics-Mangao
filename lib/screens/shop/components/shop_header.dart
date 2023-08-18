@@ -5,6 +5,7 @@ import '../../../models/Cart.dart';
 import '../../../size_config.dart';
 import 'icon_btn_with_counter.dart';
 import 'search_field.dart';
+import 'package:mechanics_mangao/providers/notification_screen.dart';
 
 class ShopHeader extends StatelessWidget {
   const ShopHeader({
@@ -28,7 +29,7 @@ class ShopHeader extends StatelessWidget {
           IconBtnWithCounter(
             svgSrc: "assets/icons/Bell.svg",
             numOfitem: 0,
-            press: () {},
+            press: () => Navigator.pushNamed(context, NotificationScreen.routeName),
           ),
         ],
       ),

@@ -4,7 +4,7 @@ import 'package:mechanics_mangao/screens/splash/splash_screen.dart';
 import 'package:mechanics_mangao/theme.dart';
 import 'package:provider/provider.dart';
 import 'package:mechanics_mangao/providers/notification_provider.dart';
-import 'package:mechanics_mangao/providers/notification_screen.dart';
+// import 'package:mechanics_mangao/providers/notification_screen.dart';
 
 void main() {
   runApp(
